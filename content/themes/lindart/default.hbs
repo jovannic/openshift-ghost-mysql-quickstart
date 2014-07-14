@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{! Document Settings }}
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	{{! Page Meta }}
+	<title>{{meta_title}} - Linda Green Arts</title>
+	<meta name="description" content="{{meta_description}}" />
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+	{{! Styles'n'Scripts }}
+	<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+
+	{{! Ghost outputs important style and meta data with this tag }}
+	{{ghost_head}}
+</head>
+
+<style>
+	body{
+		background: #000000;
+	}
+</style>
+
+<body class="{{body_class}}">
+
+	<div class="head-bar"></div>
+
+	<div class="site-header">
+		<a href="/home/"><div class="header-title">Linda Green Arts</div></a>
+		<a href="/about/"><div class="header-button">About</div></a>
+		{{! <a href="/"><div class="header-button">Blog</div></a> }}
+		<a href="/gallery/"><div class="header-button">Gallery</div></a>
+		<a href="/events/"><div class="header-button">Events</div></a>
+		<a href="/contact/"><div class="header-button">Contact</div></a>
+		<a href="/links/"><div class="header-button">Links</div></a>
+	</div>
+
+	<div class="head-line"></div>
+
+	<div class="side-line">
+	<div class="site-body">
+		{{{body}}}
+
+		{{! Ghost outputs important scripts and data with this tag }}
+		{{ghost_foot}}
+
+		{{! The main JavaScript file for Casper }}
+		<script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+		<script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+	</div>
+	</div>
+
+	<div class="foot-line"></div>
+
+	<div class="foot-text">&copy; {{date format="YYYY"}} &nbsp;&nbsp; Linda Green &nbsp;&nbsp; All Rights Reserved</div>
+
+</body>
+
+</html>
